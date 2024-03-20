@@ -38,19 +38,18 @@ function createListItem(nameTask) {
   //adaugam un buton de stergere
   const deleteButton = document.createElement("button");
   deleteButton.textContent = "x";
+  deleteButton.classList.add("deleteButton");
   //atasam o functie cu evenimentul click deleteTodo pe buton
-  deleteButton.addEventListener("click", function (e) {
-    deleteTodo(li, e);
-  });
-
+  deleteButton.addEventListener("click", deleteTodo);
+  //adaugam butonul de stergere la randul listei
   li.appendChild(deleteButton);
   return li;
 }
 
 // delete button pt li si evenimentul e
-function deleteTodo(li, e) {
+function deleteTodo(e) {
   console.log(e.target);
-  li.remove();
+  e.target.parentElement.remove();
 }
 
 function clearInput() {
