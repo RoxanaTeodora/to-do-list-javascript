@@ -30,3 +30,6 @@ The use should be able to delete a todo
 the creation of li element must include a button with X content
 an event listener must be added when the button is created
 the li that contains the button must be removed when delete button is clicked
+
+\*Checkbox for todos
+add an input checkbox before the todos
