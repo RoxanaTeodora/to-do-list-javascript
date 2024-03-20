@@ -1,6 +1,6 @@
 ### TODOLIST
 
-## HTML & CSS Starte code:
+#### HTML & CSS Starte code:
 
 div container
 h1 - Todo List
@@ -8,7 +8,7 @@ input type text
 button - disabled by default
 The "Add" must be enabled when user types in input
 
-## JavaScript:
+#### JavaScript:
 
 \*Disabled & enabled button
 The "Add" button must be enabled when user types in input
