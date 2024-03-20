@@ -2,12 +2,28 @@
   width: 70vw;
   margin: auto;
   background-color: #008dda;
-  color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   padding: 15px;
   border-radius: 10px;
   margin-top: 40px;
+}
+
+.title {
+  color: white;
+}
+
+#todo-input,
+#add-task,
+#todo-list li {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px;
+}
+
+#add-task {
+  background-color: #124076;
+  color: white;
 }
 
 #todo-list {
@@ -16,18 +32,19 @@
 
 #todo-list li {
   list-style-type: none;
-  /* display: flex;
+  display: flex;
   justify-content: space-between;
-  background-color: #67c6e3;
-  padding: 0px 10px;
-  border: 1.5px solid black;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 4px;
   border-radius: 5px;
-  margin-bottom: 5px; */
+  margin: 3px;
 }
 
 .deleteButton {
   background: none;
-  color: aliceblue;
+  color: black;
   border: 1px solid transparent;
   border-radius: 1px solid transparent;
   cursor: pointer;
