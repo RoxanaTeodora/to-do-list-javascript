@@ -22,12 +22,23 @@ function onTypeTodo() {
 btn.addEventListener("click", onAddtodo);
 
 function onAddtodo() {
+  //se creeaza un element li prin apelarea functiei createListItem
+  const li = createListItem(input.value);
+  //se adauga elementul din input  la lista
+  list.appendChild(li);
+  //se utilizeaza apelarea functiei clearInput pentru a golii imputul
+  clearInput();
+}
+
+function createListItem(nameTask) {
   //se creeaza un element li
   const li = document.createElement("li");
   //adaugam valoarea din input la li
-  li.innerHTML = input.value;
-  //adaugam elementul la lista
-  list.appendChild(li);
+  li.innerHTML = nameTask;
+  return li;
+}
+
+function clearInput() {
   //clear selection in input
   input.value = "";
   //disabled again
