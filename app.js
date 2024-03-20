@@ -35,7 +35,22 @@ function createListItem(nameTask) {
   const li = document.createElement("li");
   //adaugam valoarea din input la li
   li.innerHTML = nameTask;
+  //adaugam un buton de stergere
+  const deleteButton = document.createElement("button");
+  deleteButton.textContent = "x";
+  //atasam o functie cu evenimentul click deleteTodo pe buton
+  deleteButton.addEventListener("click", function (e) {
+    deleteTodo(li, e);
+  });
+
+  li.appendChild(deleteButton);
   return li;
+}
+
+// delete button pt li si evenimentul e
+function deleteTodo(li, e) {
+  console.log(e.target);
+  li.remove();
 }
 
 function clearInput() {

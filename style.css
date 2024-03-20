@@ -1,7 +1,7 @@
 #container {
   width: 70vw;
   margin: auto;
-  background-color: blue;
+  background-color: #008dda;
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
@@ -14,16 +14,16 @@
   padding: 0;
 }
 
-/* #todo-list li {
+#todo-list li {
   list-style-type: none;
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   background-color: #67c6e3;
   padding: 0px 10px;
   border: 1.5px solid black;
   border-radius: 5px;
-  margin-bottom: 5px;
-} */
+  margin-bottom: 5px; */
+}
 
 .detele-button {
   background: none;
