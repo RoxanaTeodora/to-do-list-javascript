@@ -35,21 +35,37 @@ function createListItem(nameTask) {
   const li = document.createElement("li");
   //adaugam valoarea din input la li
   li.innerHTML = nameTask;
+
+  //adaugare buton de bifare si paragraf
+  const p = document.createComment("paragraph");
+  const check = document.createElement("input");
+  check.type = "checkbox";
+  check.classList.add("check-item");
+  li.append(check);
+
   //adaugam un buton de stergere
   const deleteButton = document.createElement("button");
-  deleteButton.textContent = "x";
+  // deleteButton.textContent = "x";
   deleteButton.classList.add("deleteButton");
+  const img = document.createElement("img");
+  img.src = "delete.png";
   //atasam o functie cu evenimentul click deleteTodo pe buton
-  deleteButton.addEventListener("click", deleteTodo);
+  deleteButton.appendChild(img);
   //adaugam butonul de stergere la randul listei
+  li.appendChild(deleteButton);
+  deleteButton.addEventListener("click", function (e) {
+    deleteTodo(li, e);
+  });
+
   li.appendChild(deleteButton);
   return li;
 }
 
 // delete button pt li si evenimentul e
-function deleteTodo(e) {
+function deleteTodo(li, e) {
   console.log(e.target);
-  e.target.parentElement.remove();
+  //stergerea intregului rand
+  li.remove();
 }
 
 function clearInput() {
