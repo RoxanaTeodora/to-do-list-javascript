@@ -43,6 +43,11 @@ function createListItem(nameTask) {
   check.classList.add("check-item");
   li.append(check);
 
+  //adaugam o functie la check
+  check.addEventListener("click", function (e) {
+    checkTodo(li, e);
+  });
+
   //adaugam un buton de stergere
   const deleteButton = document.createElement("button");
   // deleteButton.textContent = "x";
@@ -73,4 +78,10 @@ function clearInput() {
   input.value = "";
   //disabled again
   btn.disabled = true;
+}
+
+//toggle pe check todo la bifare
+function checkTodo(li, e) {
+  console.log(e.target);
+  li.classList.add("viwed");
 }
