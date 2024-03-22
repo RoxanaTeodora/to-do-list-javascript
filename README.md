@@ -27,10 +27,10 @@ The "Add" must be enabled when the user types in the input
   The user should be able to delete a todo
 
 - Edit the todo
-  the creation of li element must include a button with X content
+  the creation of li element must include a button with a image
   an event listener must be added when the button is created
   the li that contains the button must be removed when the delete button is clicked
 
 - Checkbox for todos
   add an input checkbox before the todos
-  when the check is clicked the li will be added a line-through textxt
+  when the check is clicked the li will be added a line-through text using toggle

@@ -83,5 +83,6 @@ function clearInput() {
 //toggle pe check todo la bifare
 function checkTodo(li, e) {
   console.log(e.target);
-  li.classList.add("viwed");
+  li.classList.toggle("viwed");
+  //li.classList.add.toggle("viwed");
 }
