@@ -1,11 +1,11 @@
 #container {
   width: 70vw;
   margin: auto;
-  background-color: #008dda;
+  background-color: #ace2e1;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 28px;
   margin-top: 40px;
 }
 
@@ -17,13 +17,18 @@
 #add-task,
 #todo-list li {
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 7px;
   border: 1px;
 }
 
+#todo-input {
+  background-color: white;
+}
+
 #add-task {
-  background-color: #124076;
+  background-color: #51829b;
   color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #todo-list {
@@ -62,19 +67,34 @@
   z-index: 1;
   width: 20px;
   height: 20px;
-  border-radius: 50%; /* Face checkbox-ul rotund */
   outline: none;
   border: 2px solid #888; /* Conturul checkbox-ului */
+  -webkit-appearance: none; /* Modifica aspectul standard al unui checkbox */
+  -moz-appearance: none; /* Modifica aspectul standard al unui checkbox */
+  appearance: none;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  outline: none;
+  cursor: pointer;
+}
+
+.check-item:checked {
+  background-color: #51829b;
+  border-color: #5e729d;
 }
 
 img {
-  width: 25px;
+  width: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 900vw;
+  padding-right: 500px;
 }
 
 .viwed {
   text-decoration: line-through;
+}
+
+.gif:hover {
+  animation-play-state: paused;
 }

@@ -60,6 +60,8 @@ function createListItem(nameTask) {
   li.appendChild(deleteButton);
   deleteButton.addEventListener("click", function (e) {
     deleteTodo(li, e);
+    //adaugare clasa pentru delete btn
+    img.className = gif;
   });
 
   li.appendChild(deleteButton);
