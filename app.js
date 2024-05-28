@@ -1,0 +1,88 @@
+const input = document.getElementById("todo-input");
+const btn = document.getElementById("add-task");
+const list = document.getElementById("todo-list");
+
+input.addEventListener("input", onTypeTodo);
+
+//disabled & enabled button
+function onTypeTodo() {
+  const inputValue = input.value; // Obținem valoarea câmpului de intrare
+  console.log(inputValue);
+  console.log(btn.disabled); // cand scriem in input afiseaza ca butonul este disabled in consola
+  if (inputValue.trim().length === 0) {
+    // Verificăm lungimea valorii
+    btn.disabled = true;
+  } else {
+    btn.disabled = false;
+  }
+  // btn.disabled = input.value.length === 0 ? true : false;
+}
+
+//add to to
+btn.addEventListener("click", onAddtodo);
+
+function onAddtodo() {
+  //se creeaza un element li prin apelarea functiei createListItem
+  const li = createListItem(input.value);
+  //se adauga elementul din input  la lista
+  list.appendChild(li);
+  //se utilizeaza apelarea functiei clearInput pentru a golii imputul
+  clearInput();
+}
+
+function createListItem(nameTask) {
+  //se creeaza un element li
+  const li = document.createElement("li");
+  //adaugam valoarea din input la li
+  li.innerHTML = nameTask;
+
+  //adaugare buton de bifare si paragraf
+  const p = document.createComment("paragraph");
+  const check = document.createElement("input");
+  check.type = "checkbox";
+  check.classList.add("check-item");
+  li.append(check);
+
+  //adaugam o functie la check
+  check.addEventListener("click", function (e) {
+    checkTodo(li, e);
+  });
+
+  //adaugam un buton de stergere
+  const deleteButton = document.createElement("button");
+  // deleteButton.textContent = "x";
+  deleteButton.classList.add("deleteButton");
+  const img = document.createElement("img");
+  img.src = "delete.png";
+  //atasam o functie cu evenimentul click deleteTodo pe buton
+  deleteButton.appendChild(img);
+  //adaugam butonul de stergere la randul listei
+  li.appendChild(deleteButton);
+  deleteButton.addEventListener("click", function (e) {
+    deleteTodo(li, e);
+  });
+
+  li.appendChild(deleteButton);
+  return li;
+}
+
+// delete button pt li si evenimentul e
+function deleteTodo(li, e) {
+  console.log(e.target);
+  //stergerea intregului rand
+  li.remove();
+}
+
+function clearInput() {
+  //clear selection in input
+  input.value = "";
+  //disabled again
+  btn.disabled = true;
+}
+
+//toggle pe check todo la bifare
+function checkTodo(li, e) {
+  console.log(e.target);
+  li.classList.toggle("viwed");
+  //li.classList.add.toggle("viwed");
+}
