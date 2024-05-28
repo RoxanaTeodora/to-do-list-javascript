@@ -1,4 +1,3 @@
-//test
 const input = document.getElementById("todo-input");
 const btn = document.getElementById("add-task");
 const list = document.getElementById("todo-list");
